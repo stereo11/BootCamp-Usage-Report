@@ -27,7 +27,7 @@ page = st_btn_select(
 
 
 if page == 'Home':
-    st.image('report.png',use_column_width=True)
+    st.image('Report.png',use_column_width=True)
 
 
 if page == 'Overall Enrollment Trends':
