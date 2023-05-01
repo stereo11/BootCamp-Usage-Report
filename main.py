@@ -38,7 +38,7 @@ if page == 'Overall Enrollment Trends':
     '''
     )
     
-    df1 = pd.read_excel('/Users/sonalichoudhary/Desktop/Visual Analytics - Chase Romaneo/Streamlit/BootCamp Usage Report/Data/Continuous_Date_file.xlsx')
+    df1 = pd.read_excel('/Data/Continuous_Date_file.xlsx')
     df1 = pd.DataFrame(df1)
 
     trend = alt.Chart(df1, title='Enrollment Trend of the Students in the BootCamp Courses').mark_line().encode(
@@ -48,7 +48,7 @@ if page == 'Overall Enrollment Trends':
 
     st.altair_chart(trend, use_container_width=True)
 
-    df2 = pd.read_excel('/Users/sonalichoudhary/Desktop/Visual Analytics - Chase Romaneo/Streamlit/BootCamp Usage Report/Data/distributionOfHoursSpend.xlsx')
+    df2 = pd.read_excel('/Data/distributionOfHoursSpend.xlsx')
     df2 = pd.DataFrame(df2)
 
     bar = alt.Chart(df2, title='Distribution of Students and No. of Hours they Spend on BootCamp Courses').mark_bar().encode(
@@ -61,20 +61,20 @@ if page == 'Overall Enrollment Trends':
 
 if page == 'Course wise Usage Analysis':
     
-    df2 = pd.read_excel('/Users/sonalichoudhary/Desktop/Visual Analytics - Chase Romaneo/Streamlit/BootCamp Usage Report/Data/CoursedistributionOfHoursSpend.xlsx')
-    df2 = pd.DataFrame(df2)
-
-    df3 = pd.read_excel('/Users/sonalichoudhary/Desktop/Visual Analytics - Chase Romaneo/Streamlit/BootCamp Usage Report/Data/Status.xlsx')
+    df3 = pd.read_excel('/Users/sonalichoudhary/Desktop/Visual Analytics - Chase Romaneo/Streamlit/BootCamp Usage Report/Data/CoursedistributionOfHoursSpend.xlsx')
     df3 = pd.DataFrame(df3)
 
+    df4 = pd.read_excel('/Users/sonalichoudhary/Desktop/Visual Analytics - Chase Romaneo/Streamlit/BootCamp Usage Report/Data/Status.xlsx')
+    df4 = pd.DataFrame(df4)
+
     ##List of Courses
-    clist = df2['Course'].unique()
+    clist = df3['Course'].unique()
     course = st.selectbox("Select a Course:",clist)
 
     col1, col2 = st.columns(2)
 
-    Activity = df2[df2['Course'] == course]
-    Status = df3[df3['Course'] == course]
+    Activity = df3[df3['Course'] == course]
+    Status = df4[df4['Course'] == course]
 
     bar = alt.Chart(Activity, title=f'Distribution of Students and No. of Hours they Spend on {course} BootCamp Course').mark_bar().encode(
     alt.X('Hours_Spend_Bucket',title='No. of Hours Spend'),
