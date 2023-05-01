@@ -1,5 +1,7 @@
 # BootCamp-Usage-Report
 Insights on usage of BootCamp.
+
+
 Introduction: Domain problem characterization.
 What is the problem you want to solve?
 
