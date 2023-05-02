@@ -68,24 +68,26 @@ if page == 'Course wise Usage Analysis':
     df4 = pd.DataFrame(df4)
 
     ##List of Courses
-    clist = df3['Course'].unique()
-    course = st.selectbox("Select a Course:",clist)
+    clist= [" "]
+    clist.extend(list(df3['Course'].unique()))
+    course = st.selectbox("Select a Course:",clist,index=0)
 
     col1, col2 = st.columns(2)
 
     Activity = df3[df3['Course'] == course]
     Status = df4[df4['Course'] == course]
 
-    bar = alt.Chart(Activity, title=f'Distribution of Students and No. of Hours they Spend on {course} BootCamp Course').mark_bar().encode(
-    alt.X('Hours_Spend_Bucket',title='No. of Hours Spend'),
-    alt.Y('n',title='No. of Students'),
-    tooltip=['Hours_Spend_Bucket','n'])
+    if(course != " "):
+        bar = alt.Chart(Activity, title=f'Distribution of Students and No. of Hours they Spend on {course} BootCamp Course').mark_bar().encode(
+        alt.X('Hours_Spend_Bucket',title='No. of Hours Spend'),
+        alt.Y('n',title='No. of Students'),
+        tooltip=['Hours_Spend_Bucket','n'])
 
-    col1.altair_chart(bar, use_container_width=True)
-    
-    bar2 = alt.Chart(Status, title=f'Distribution of Students on Current Progress in {course} BootCamp Course').mark_bar().encode(
-    alt.X('Status',title='Status'),
-    alt.Y('count',title='No. of Students'),
-    tooltip=['Status','count'])
+        col1.altair_chart(bar, use_container_width=True)
+        
+        bar2 = alt.Chart(Status, title=f'Distribution of Students on Current Progress in {course} BootCamp Course').mark_bar().encode(
+        alt.X('Status',title='Status'),
+        alt.Y('count',title='No. of Students'),
+        tooltip=['Status','count'])
 
-    col2.altair_chart(bar2, use_container_width=True)
+        col2.altair_chart(bar2, use_container_width=True)
