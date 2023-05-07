@@ -12,6 +12,8 @@ The app has three pages:
 The raw data is collected from the canvas. The BootCamp courses are created on Canvas. Students request to enroll in BootCamp via Google from the present on the School of Data Science website.
 
 Extracted data from 3 places:
+
+
 **Google Form Responses**
 
 **Grades Data from the canvas page for each of the courses**
