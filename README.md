@@ -4,9 +4,13 @@ Insights on the usage of BootCamp. UNCC has in-house BootCamp courses for Data S
 **Streamlit app**: https://stereo11-bootcamp-usage-report-main-3ip1f2.streamlit.app
 
 The app has three pages:
+
 **Home**: Introduction
+
 **Overall Enrollment Page**: It contains the overall enrollment trend of students
+
 **Course-wise Usage Analysis**: Course-wise trend of Usage of BootCamp.
+
 
 # Data Preparation
 The raw data is collected from the canvas. The BootCamp courses are created on Canvas. Students request to enroll in BootCamp via Google from the present on the School of Data Science website.
