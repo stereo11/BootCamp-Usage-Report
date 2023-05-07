@@ -1,4 +1,4 @@
-# BootCamp-Usage-Report
+# BootCamp Usage Analysis
 Insights on the usage of BootCamp. UNCC has in-house BootCamp courses for Data Science and Business Analytics students. Recently, the School of Data Science took a DataCamp subscription for students. This app will help to decide whether to move BootCamp courses to DataCamp courses.
 
 **Streamlit app**: https://stereo11-bootcamp-usage-report-main-3ip1f2.streamlit.app
