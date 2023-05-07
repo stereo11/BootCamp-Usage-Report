@@ -63,7 +63,7 @@ if page == 'Course wise Usage Analysis':
     st.write(
     # Intro text
     '''
-    ##### Course-wise distribution of students and BootCamp Usage. Course-wise distribution of students and BootCamp Usage. It will help to decide whether to continue BootCamp courses or move to DataCamp.
+    ##### Course-wise distribution of students and BootCamp Usage. It will help to decide whether to continue BootCamp courses or move to DataCamp.
     '''
     )
     
