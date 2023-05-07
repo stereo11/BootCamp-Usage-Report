@@ -13,8 +13,11 @@ The raw data is collected from the canvas. The BootCamp courses are created on C
 
 Extracted data from 3 places:
 **Google Form Responses**
+
 **Grades Data from the canvas page for each of the courses**
+
 **Activity Data from Canvas for each of the courses**
+
 
 I have performed Data Cleaning and Data Wrangling.
 
